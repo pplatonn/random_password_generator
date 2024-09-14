@@ -1,0 +1,11 @@
+{
+  "name": "random_password",
+  "version": "1.0.0",
+  "description": "random password generator",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Polina Platonova",
+  "license": "ISC"
+}
