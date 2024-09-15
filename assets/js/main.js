@@ -4,17 +4,18 @@ const lowercaseChars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', '
 const uppercaseChars = lowercaseChars.join("").toUpperCase().split('')
 const specialChars = ['!', '@', '#', '$', '%', '^', '&', '*'];
 const passwordField = document.getElementById("passwordField")
-const copyBtn = document.getElementById('copyBtn')
+// const copyBtn = document.getElementById('copyBtn')
 const submitBtn = document.querySelector('button')
+const checkbox = document.getElementById('includeSpecialChars')
 
 // initializing the main function which returns password 
 
 function generatePassword(length) {
-    copyBtn.style.display = 'block'
+    // copyBtn.style.display = 'block'
     var password = []
     let i = 0;
 
-// adding random symbols from characters' arrays without trimming and slicing 
+    // adding random symbols from characters' arrays without trimming and slicing 
 
     while (i < length) {
         let char = Math.round(Math.random() * (lowercaseChars.length - 1))
@@ -29,15 +30,16 @@ function generatePassword(length) {
         password.push(uppercaseChars[char])
         j++
     };
-
+    if (checkbox.checked) {
         let k = 0
         while (k < length) {
             let char = Math.round(Math.random() * (specialChars.length - 1))
             password.push(specialChars[char])
             k++
         };
+    }
 
-// although password property isn't ready, use return because we need to save it 
+    // although password property isn't ready, use return because we need to save it 
 
     return password
 }
@@ -64,11 +66,11 @@ submitBtn.addEventListener('click', () => {
     passwordField.textContent = userPassword
 })
 
-// clipboard copy function (available on mobiles)
+// in progress...
 
-copyBtn.onclick = async function() {
-    var copyText = passwordField.textContent
-    copyText.select()
-    copyText.setSelectionRange(0, 999)
-    navigator.clipboard.writeText(copyText.value)
-}
+// copyBtn.onclick = async function() {
+//     var copyText = passwordField.textContent
+//     copyText.select()
+//     copyText.setSelectionRange(0, 999)
+//     navigator.clipboard.writeText(copyText.value)
+// }
