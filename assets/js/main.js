@@ -60,11 +60,21 @@ function shuffle(array) {
 // putting all the functions to button + trimming the password 
 
 submitBtn.addEventListener('click', () => {
+    submitBtn.style.backgroundColor = '#cfd0d1'
+    submitBtn.style.color = '#000'
+    setInterval(() => {
+        submitBtn.style.backgroundColor = '#504eff'
+        submitBtn.style.color = '#fff'
+    },
+        1100)
+
     let passwordlength = parseInt(document.getElementById('lengthField').value)
     var userPassword = shuffle(generatePassword(passwordlength)).join('');
     userPassword = userPassword.slice(0, passwordlength)
     passwordField.textContent = userPassword
 })
+
+
 
 // in progress...
 

@@ -13,7 +13,7 @@ body {
 form {
     padding-top: 20px;
     width: 50%;
-    height: 270px;
+    height: 30vh;
     background-color: #fff;
     margin: 0 auto;
     text-align: center;
@@ -69,10 +69,10 @@ h2 {
     margin-bottom: 20px;
 }
 
-#submitBtn:hover {
-    background-color: rgb(207, 208, 209);
+/* #submitBtn:hover {
+    background-color: #cfd0d1;
     color: #000;
-}
+} */
 
 #includeSpecialChars,
 label {
@@ -100,12 +100,13 @@ p {
     }
 
     h2 {
-
         font-size: 18px;
     }
 
     form {
+        width: 60%;
         padding-top: 20px;
+        height: 29vh;
     }
 
     #lengthField {
@@ -118,6 +119,7 @@ p {
 @media (max-width: 1024px) {
     form {
         width: 58%;
+        height: 35vh;
     }
 
     #lengthField {
@@ -137,5 +139,25 @@ p {
 
     #lengthField {
         width: 40%;
+    }
+    form {
+        width: 78%;
+        height: 32vh;
+    }
+}
+@media (max-width: 375px) {
+    h1 {
+        font-size: 20px;
+    }
+    #submitBtn {
+        width: 80%;
+    }
+
+    #lengthField {
+        width: 40%;
+    }
+    form {
+        width: 70%;
+        height: 43vh;
     }
 }
