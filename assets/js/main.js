@@ -4,13 +4,13 @@ const lowercaseChars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', '
 const uppercaseChars = lowercaseChars.join("").toUpperCase().split('')
 const specialChars = ['!', '@', '#', '$', '%', '^', '&', '*'];
 const passwordField = document.getElementById("passwordField")
-// const copyBtn = document.getElementById('copyBtn')
+const copyBtn = document.getElementById('copyBtn')
 const submitBtn = document.querySelector('button')
 
 // initializing the main function which returns password 
 
 function generatePassword(length) {
-    // copyBtn.style.display = 'block'
+    copyBtn.style.display = 'block'
     var password = []
     let i = 0;
 
@@ -64,9 +64,11 @@ submitBtn.addEventListener('click', () => {
     passwordField.textContent = userPassword
 })
 
-// copyBtn.onclick = async function() {
-//     var copyText = passwordField.textContent
-//     copyText.select()
-//     copyText.setSelectionRange(0, 10)
-//     await navigator.clipboard.writeText(copyText.value)
-// }
+// clipboard copy function (available on mobiles)
+
+copyBtn.onclick = async function() {
+    var copyText = passwordField.textContent
+    copyText.select()
+    copyText.setSelectionRange(0, 999)
+    navigator.clipboard.writeText(copyText.value)
+}

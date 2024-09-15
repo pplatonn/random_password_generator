@@ -12,7 +12,7 @@ body {
 
 form {
     padding-top: 20px;
-    width: 30%;
+    width: 50%;
     height: 270px;
     background-color: #fff;
     margin: 0 auto;
@@ -43,7 +43,7 @@ h2 {
 }
 
 #submitBtn {
-    width: 20%;
+    width: 50%;
     background-color: #504eff;
     color: #fff;
     height: 40px;
@@ -74,7 +74,8 @@ h2 {
     color: #000;
 }
 
-#includeSpecialChars, label {
+#includeSpecialChars,
+label {
     display: inline;
 }
 
@@ -82,6 +83,59 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* @media (max-width: 500px) {
-    
-} */
+p {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* laptop adaptive design  */
+
+@media (max-width: 1440px) {
+    #submitBtn {
+        width: 45%;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+
+        font-size: 18px;
+    }
+
+    form {
+        padding-top: 20px;
+    }
+
+    #lengthField {
+        width: 50%;
+    }
+}
+
+/* tablet adaptive design  */
+
+@media (max-width: 1024px) {
+    form {
+        width: 58%;
+    }
+
+    #lengthField {
+        width: 45%;
+    }
+}
+
+/* small smartphone adaptive design  */
+
+@media (max-width: 436px) {
+    h1 {
+        font-size: 20px;
+    }
+    #submitBtn {
+        width: 80%;
+    }
+
+    #lengthField {
+        width: 40%;
+    }
+}

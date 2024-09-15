@@ -4,7 +4,7 @@
   "description": "random password generator",
   "main": "main.js",
   "scripts": {
-    "test": "test"
+    "start": "node main.js"
   },
   "author": "Polina Platonova",
   "license": "ISC"
